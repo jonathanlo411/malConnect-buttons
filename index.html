@@ -8,24 +8,51 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Normal Buttons</h1>
     <div id="plx">
         <a href="${url}" target="_blank" rel="noopener noreferrer" class="inj-a-tag">
-            <button class="inj-btn-tag mdex">
+            <button class="inj-btn-tag mdex unblocked">
                 <p class="bt-text">Read on</p> 
                 <img src="md-cat-logo.svg" id="md-cat" />
                 <img src="md-logo.svg" id="md-logo" />
             </button>
         </a>
         <a href="${url}" target="_blank" rel="noopener noreferrer" class="inj-a-tag">
-            <button class="inj-btn-tag mglo">
+            <button class="inj-btn-tag mglo unblocked">
                 <p class="bt-text">Read on</p>
                 <img src="manganelo-logo.png" id="mglo-logo">
             </button>
         </a>
         <a href="${url}" target="_blank" rel="noopener noreferrer" class="inj-a-tag">
-            <button class="inj-btn-tag gogo">
+            <button class="inj-btn-tag gogo unblocked">
                 <p class="bt-text">Watch on</p>
                 <img src="gogoanime-logo.png" id="gga-logo" />
+            </button>
+        </a>
+    </div>
+
+    <h1>Blocked Buttons</h1>
+    <div id="plx">
+        <a target="_blank" rel="noopener noreferrer" class="inj-a-tag">
+            <button class="inj-btn-tag mdex blocked">
+                <p class="bt-text">Read on</p> 
+                <img src="md-cat-logo.svg" id="md-cat" />
+                <img src="md-logo.svg" id="md-logo" />
+                <span class="block-pop">No Data on MangaDex</span>
+            </button>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" class="inj-a-tag" >
+            <button class="inj-btn-tag mglo blocked">
+                <p class="bt-text">Read on</p>
+                <img src="manganelo-logo.png" id="mglo-logo">
+                <span class="block-pop">No Data on Manganelo</span>
+            </button>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" class="inj-a-tag">
+            <button class="inj-btn-tag gogo blocked">
+                <p class="bt-text">Watch on</p>
+                <img src="gogoanime-logo.png" id="gga-logo" />
+                <span class="block-pop">No Data on GoGoAnime</span>
             </button>
         </a>
     </div>

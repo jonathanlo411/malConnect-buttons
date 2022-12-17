@@ -1,4 +1,5 @@
-#plx {width: 225px;}
+body {text-align: center;}
+#plx {width: 225px; margin: auto;}
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
@@ -59,12 +60,60 @@
     text-decoration: none;
 }
 
+.blocked {
+    position: relative;
+}
+.blocked:hover {
+    cursor: not-allowed;
+}
+.blocked::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(256, 256, 256, 0.5);
+    z-index: 1;
+    transition: opacity 0.25s linear;
+    border-radius: 200px;
+}
+.blocked:hover .block-pop {
+    visibility: visible;
+}
+
+.block-pop {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 1!important;
+}
+.block-pop::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
 /* Individual Button Stylings */
 .mdex {
     background-color: var(--md-background);
     color: #fff;
 }
-.mdex:hover {
+.mdex.unblocked:hover {
     background-color: var(--md-background-lighten);
 }
 #md-cat {
@@ -105,8 +154,8 @@
     transition: opacity 0.25s linear;
     opacity: 0;
     border-radius: 200px;
-  }
-.mglo:hover::before {
+}
+.mglo.unblocked:hover::before {
     opacity: 1;
 }
 #mglo-logo {
@@ -119,7 +168,7 @@
     background-color: var(--gogo-background);
     color: #fff;
 }
-.gogo:hover {
+.gogo.unblocked:hover {
     background-color: var(--gogo-background-darken)
 }
 #gga-logo {
