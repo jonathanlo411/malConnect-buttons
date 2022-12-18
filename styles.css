@@ -22,6 +22,10 @@ body {text-align: center;}
     --gogo-background: #1E352F;
     --gogo-background-darken: #335145;
     --gogo-highlight: #00a651;
+
+    /* YouTube */
+    --yt-background: #282828;
+    --yt-background-lighten: #4b4b4b;
 }
 
 /* Base Buttons */
@@ -39,9 +43,10 @@ body {text-align: center;}
     margin: 5px auto;
     border: none;
     border-radius: 200px;
-    font-family: 'Poppins', 'Verdana', 'Arial';
+    font-family: 'Arial';
     transition: 0.3s;
     display: flex;
+    position: relative;
 }
 
 .inj-btn-tag:hover {
@@ -60,9 +65,6 @@ body {text-align: center;}
     text-decoration: none;
 }
 
-.blocked {
-    position: relative;
-}
 .blocked:hover {
     cursor: not-allowed;
 }
@@ -174,4 +176,17 @@ body {text-align: center;}
 #gga-logo {
     height: 30px;
     margin-left: 17px;
+}
+
+.yt {
+    background-color: var(--yt-background);
+    color: white;
+}
+.yt:hover {
+    background-color: var(--yt-background-lighten);
+}
+#yt-logo {
+    height: 35px;
+    left: 35%;
+    position: absolute;
 }
